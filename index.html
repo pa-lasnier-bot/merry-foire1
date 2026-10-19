@@ -1,0 +1,65 @@
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;700;900&display=swap');
+  .poster-wrap { background:#0a0a0a; width:100%; aspect-ratio:16/9; display:flex; align-items:stretch; justify-content:center; }
+  .poster { width:100%; max-width:960px; background:#0a0a0a; display:grid; grid-template-columns:1fr 340px; position:relative; overflow:hidden; }
+  .left { padding:44px 40px 44px 52px; display:flex; flex-direction:column; justify-content:space-between; }
+  .right { background:#111; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:40px 32px; border-left:4px solid #FFD600; }
+  .tag { font-family:'Inter',sans-serif; font-size:11px; font-weight:700; letter-spacing:4px; color:#FFD600; text-transform:uppercase; margin-bottom:16px; }
+  .main-title { font-family:'Bebas Neue','Arial Black',sans-serif; font-size:clamp(72px,11vw,120px); line-height:0.9; color:#fff; letter-spacing:2px; margin:0; }
+  .subtitle { font-family:'Inter',sans-serif; font-size:14px; color:#888; margin-top:16px; letter-spacing:1px; line-height:1.6; }
+  .money-row { display:flex; gap:14px; margin-top:16px; align-items:center; }
+  .bill { background:#1a1a1a; border:1px solid #333; border-radius:6px; padding:8px 18px; font-family:'Bebas Neue','Arial Black',sans-serif; font-size:22px; color:#FFD600; letter-spacing:2px; }
+  .kiosques { display:flex; gap:8px; flex-wrap:wrap; margin-top:16px; }
+  .kiosk-tag { font-family:'Inter',sans-serif; font-size:11px; font-weight:700; padding:5px 12px; border:1px solid; text-transform:uppercase; letter-spacing:1px; }
+  .date-block { padding-top:20px; }
+  .date-label { font-family:'Inter',sans-serif; font-size:10px; font-weight:700; letter-spacing:4px; color:#555; text-transform:uppercase; margin-bottom:6px; }
+  .date-val { font-family:'Bebas Neue','Arial Black',sans-serif; font-size:28px; color:#fff; letter-spacing:2px; }
+  .scan-label { font-family:'Inter',sans-serif; font-size:10px; font-weight:700; letter-spacing:3px; color:#FFD600; text-transform:uppercase; margin-bottom:14px; text-align:center; }
+  .qr-wrap { background:#fff; padding:10px; display:inline-block; }
+  .url-label { font-family:'Inter',sans-serif; font-size:10px; color:#444; margin-top:10px; text-align:center; letter-spacing:1px; }
+  .accent-line { width:60px; height:4px; background:#FFD600; margin-bottom:20px; }
+  .deco-circle { position:absolute; width:320px; height:320px; border-radius:50%; border:1px solid #1a1a1a; top:-80px; left:-80px; pointer-events:none; }
+  .deco-circle2 { position:absolute; width:200px; height:200px; border-radius:50%; border:1px solid #1a1a1a; top:-20px; left:-20px; pointer-events:none; }
+  .dollar-deco { position:absolute; font-family:'Bebas Neue','Arial Black',sans-serif; color:#161616; pointer-events:none; user-select:none; }
+</style>
+
+<div class="poster-wrap">
+  <div class="poster">
+    <div class="deco-circle"></div>
+    <div class="deco-circle2"></div>
+    <span class="dollar-deco" style="font-size:180px;bottom:-30px;right:345px">$</span>
+    <span class="dollar-deco" style="font-size:90px;top:10px;right:360px;color:#141414">$</span>
+    <div class="left">
+      <div>
+        <div class="tag">— Kiosques créatifs</div>
+        <div class="accent-line"></div>
+        <h1 class="main-title">LA<br>FOIRE</h1>
+        <p class="subtitle">Achète. Découvre. Supporte.</p>
+        <div class="money-row">
+          <div class="bill">$ 💵 $</div>
+          <div style="font-family:'Inter',sans-serif;font-size:12px;color:#555;letter-spacing:1px;line-height:1.5">Paiement direct<br>au kiosque</div>
+        </div>
+        <div class="kiosques">
+          <span class="kiosk-tag" style="color:#FF3C3C;border-color:#FF3C3C">💅 Ongles & Tresses</span>
+          <span class="kiosk-tag" style="color:#FFD600;border-color:#FFD600">🧥 Streetwear</span>
+          <span class="kiosk-tag" style="color:#00E5FF;border-color:#00E5FF">🌸 Fleurs</span>
+          <span class="kiosk-tag" style="color:#B4FF00;border-color:#B4FF00">🎨 Art</span>
+          <span class="kiosk-tag" style="color:#FF8C00;border-color:#FF8C00">🍱 Nourriture</span>
+        </div>
+      </div>
+      <div class="date-block">
+        <div class="date-label">Date</div>
+        <div class="date-val" style="white-space:nowrap">Jeudi 12 novembre</div>
+        <div class="date-val" style="white-space:nowrap;color:#FFD600">Au dîner</div>
+      </div>
+    </div>
+    <div class="right">
+      <div class="scan-label">Inscris ton kiosque</div>
+      <div class="qr-wrap">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://la-foire-amos.netlify.app/&bgcolor=ffffff&color=0a0a0a&margin=0" width="180" height="180" alt="QR Code"/>
+      </div>
+      <div class="url-label">la-foire-amos.netlify.app</div>
+    </div>
+  </div>
+</div>
